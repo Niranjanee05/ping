@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- displays site properly based on user's device -->
+
+    <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+    <link href="https://fonts.googleapis.com/css2?family=Libre+Franklin:wght@300;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+    <link rel="stylesheet" href="style.css">
+    <title>Skill Safari | Ping coming soon page</title>
+
+</head>
+
+<body>
+    <div class="whole">
+
+        <div class="part-1">
+            <img src="images/logo.svg" alt="logo">
+            <h1>We are launching</h1>
+            <p>Subscribe and get notified</p>
+
+            <div class="data">
+                <form id="form">
+                    <div id="input_field">
+                        <label for="user_input"></label>
+                        <input id="user_input" class="" name="mail" placeholder="     Your email address.." type="email">
+                        <button name="submitted" type="submit" aria-label="submit">Notify Me</button>
+                    </div>
+                    <small id="err">Please provide a valid email</small>
+                </form>
+            </div>
+
+            <div class="part-2">
+                <img src="images/illustration-dashboard.png" alt="pictue">
+
+                <div class="icons">
+                    <a href="#"><i class="fa fa-facebook"></i></a>
+                    <a href="#"><i class="fa fa-twitter"></i></a>
+                    <a href="#"><i class="fa fa-instagram"></i></a>
+                </div>
+                <p>© Copyright Ping. All rights reserved</p>
+            </div>
+        </div>
+
+
+
+    </div>
+
+
+
+    <script>
+        let userInput = document.getElementById("user_input");
+
+        let userForm = document.getElementById("form");
+
+        let err_message = document.getElementById("err");
+
+        userForm.addEventListener('submit', (e) => {
+            e.preventDefault();
+
+            if (!validateEmail(userInput.value)) {
+                err_message.style.display = "block";
+                userInput.classList.add("error");
+            } else {
+                err_message.style.display = "none";
+                userInput.classList.remove("error");
+            }
+        })
+
+        function validateEmail(email) {
+            const re = /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
+            return re.test(String(email).toLowerCase());
+        }
+    </script>
+</body>
+
+</html>

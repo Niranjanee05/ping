@@ -1,0 +1,148 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Libre Franklin;
+}
+
+.whole {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.part-1 {
+    display: flex;
+    flex-flow: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    margin-top: 4rem;
+}
+
+.part-1 h1::after {
+    content: " soon!";
+    font-size: 35px;
+    font-weight: 900;
+    color: hsl(209, 33%, 12%);
+}
+
+.part-1 h1 {
+    margin-top: 2rem;
+    color: hsl(0, 0%, 59%);
+    font-weight: 300;
+}
+
+.part-1 img {
+    width: 8%;
+}
+
+.part-1 p {
+    color: hsl(209, 33%, 12%);
+    line-height: 2;
+}
+
+.data input {
+    width: 17rem;
+    height: 2.8rem;
+    border-radius: 50px;
+    border: 1.5px solid hsl(223, 100%, 88%);
+}
+
+::placeholder {
+    color: hsl(221, 19%, 84%);
+}
+
+.data {
+    margin-top: 1.5rem;
+}
+
+.data button {
+    width: 9rem;
+    height: 2.8rem;
+    border-radius: 50px;
+    border: 2px solid hsl(223, 87%, 63%);
+    background-color: hsl(223, 87%, 63%);
+    color: white;
+}
+
+.data button:hover {
+    box-shadow: 0 2px 5px 2px hsl(223, 100%, 88%);
+}
+
+.part-2 {
+    margin-top: 3rem;
+}
+
+.part-2 img {
+    width: 35%;
+}
+
+.icons {
+    margin-top: 2rem;
+    word-spacing: 20px;
+}
+
+.icons i {
+    border: 1px solid hsl(223, 100%, 88%);
+    padding: 7px;
+    border-radius: 100px;
+}
+
+.icons i:hover {
+    background: hsl(223, 87%, 63%);
+    color: white;
+}
+
+.icons a {
+    color: hsl(223, 87%, 63%);
+}
+
+.part-2 p {
+    color: hsl(0, 0%, 59%);
+    line-height: 4;
+}
+
+form .error {
+    border: 2px solid hsl(0, 93%, 68%);
+}
+
+form #err {
+    display: none;
+    color: hsl(0, 93%, 68%);
+    margin: 10px 0 0 0;
+}
+
+@media only screen and (max-width: 666px) {
+    .part-1 img {
+        width: 15%;
+    }
+    .part-1 p {
+        line-height: 3;
+    }
+    #input_field {
+        display: flex;
+        flex-flow: column;
+        justify-content: center;
+        align-items: center;
+    }
+    #input_field input {
+        width: 22rem;
+    }
+    #input_field button {
+        margin-top: 3rem;
+        width: 22rem;
+    }
+    .part-2 img {
+        width: 85%;
+    }
+    .part-2 .icons {
+        margin-top: 6rem;
+    }
+    .part-2 p {
+        margin-top: 1rem;
+    }
+}
